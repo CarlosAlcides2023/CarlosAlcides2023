@@ -7,7 +7,7 @@ pipeline {
                 script {
                     // Desplegar el contenedor de la aplicación
                     //sh 'docker run -d --name mi_app <nombre_del_contenedor_app>'
-                  sh 'docker run -d --name hello-world my-container'
+                  sh 'docker run -d --name my-container hello-world'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
                 script {
                     // Desplegar el contenedor con pytest
                     //sh 'docker run --rm --name pytest_container --link mi_app:app <nombre_del_contenedor_pytest>'
-                  sh 'docker run --rm --name test-hello-worldlocal my-containerlocal'
+                  sh 'docker run --rm --name my-containerlocal test-hello-worldlocal'
                 }
             }
         }
