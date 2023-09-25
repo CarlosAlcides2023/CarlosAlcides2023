@@ -1,6 +1,16 @@
 pipeline {
     agent any
     stages {
+        stage('Desplegar App Jenkins') {
+            steps {
+                script {
+                    // Desplegar el contenedor de la aplicación
+                    //sh 'docker run -d --name mi_app <nombre_del_contenedor_app>'
+                  sh 'docker run -d --name jenkins-blueocean myjenkins-blueocean:2.414.2-1'
+                }
+            }
+        }
+        
         stage('Desplegar App') {
             steps {
                 script {
