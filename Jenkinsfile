@@ -25,10 +25,10 @@ pipeline {
     post {
         always {
             // Limpieza: Detener y eliminar los contenedores después de las pruebas
-            sh 'docker stop mi_app || true'
-            sh 'docker rm mi_app || true'
-            sh 'docker stop pytest_container || true'
-            sh 'docker rm pytest_container || true'
+            sh 'docker stop hello-world || true'
+            sh 'docker rm hello-world || true'
+            sh 'docker stop test-hello-worldlocal || true'
+            sh 'docker rm test-hello-worldlocal || true'
         }
     }
 }
