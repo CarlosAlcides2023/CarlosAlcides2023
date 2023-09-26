@@ -1,6 +1,7 @@
 pipeline {
     agent any
     stages {
+        /*
         stage('Desplegar App') {
             steps {
                 script {
@@ -10,12 +11,13 @@ pipeline {
                 }
             }
         }
+        */
         stage('Ejecutar Pruebas') {
             steps {
                 script {
                     // Desplegar el contenedor con pytest
                     //sh 'docker run --rm --name pytest_container --link mi_app:app <nombre_del_contenedor_pytest>'
-                  sh 'docker run -d -u pepe --name test2 test-hello-worldlocal'
+                  sh 'docker run -d --name test2 test-hello-worldlocal'
                 }
             }
         }
