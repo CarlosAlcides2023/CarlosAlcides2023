@@ -6,7 +6,7 @@ pipeline {
                 script {
                     // Desplegar el contenedor de la aplicación
                     //sh 'docker run -d --name mi_app <nombre_del_contenedor_app>'
-                  sh 'docker run -d --name aplicacion hello-world'
+                  sh 'docker run -d --name aplicacion1 hello-world'
                 }
             }
         }
