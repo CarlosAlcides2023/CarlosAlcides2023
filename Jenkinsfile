@@ -1,16 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Desplegar App Jenkins') {
-            steps {
-                script {
-                    // Desplegar el contenedor de la aplicación
-                    //sh 'docker run -d --name mi_app <nombre_del_contenedor_app>'
-                  sh 'docker login'
-                }
-            }
-        }
-        
         stage('Desplegar App') {
             steps {
                 script {
