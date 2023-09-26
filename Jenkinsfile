@@ -24,10 +24,10 @@ pipeline {
     post {
         always {
             // Limpieza: Detener y eliminar los contenedores después de las pruebas
-            sh 'docker stop hello-world || true'
-            sh 'docker rm hello-world || true'
-            sh 'docker stop test-hello-worldlocal || true'
-            sh 'docker rm test-hello-worldlocal || true'
+            sh 'docker stop aplicacion2 || true'
+            sh 'docker rm aplicacion2 || true'
+            sh 'docker stop test2 || true'
+            sh 'docker rm test2 || true'
         }
     }
 }
